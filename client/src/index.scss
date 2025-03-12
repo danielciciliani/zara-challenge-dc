@@ -1,0 +1,44 @@
+$white: #fafafa;
+$black: #000000;
+$dark-gray: #79736D;
+$light-gray: #AAAAAA;
+$font-family: Helvetica Neue, Arial, sans-serif;
+$font-weight-light: 300;
+$line-height-base: 1;
+$font-size-big: 15px;
+$font-size-mid: 12px;
+
+$color-primary: $black;
+$color-secondary: $dark-gray;
+$color-tertiary: $light-gray;
+$font-size-name: $font-size-big;
+$font-size-brand: $font-size-mid;
+
+
+
+:root {
+  font-family: $font-family;
+  line-height: $line-height-base;
+  font-weight: $font-weight-light;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+
+}
+
