@@ -1,0 +1,23 @@
+@use '../../index.scss' as *;
+
+.grid{
+
+    &_card{
+        width: 300px;
+        height: auto;
+        border: 1px solid;
+        padding: 30px;
+
+        &_image{
+            height: 200px;
+            width: 200px;
+            object-fit: contain;
+        }
+
+        &_brand{
+            color: $color-secondary;
+        }
+
+    
+    }
+}
