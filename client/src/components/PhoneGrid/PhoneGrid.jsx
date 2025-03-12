@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import './PhoneGrid.scss';
 
 function PhoneGrid() {
-    const [products, setProducts] = useState([]);
-    const productsUrl = 'https://prueba-tecnica-api-tienda-moviles.onrender.com/products?limit=20';
+    const [uniqueProducts, setProducts] = useState([]);
+    const limit = 40;
+    const productsUrl = `https://prueba-tecnica-api-tienda-moviles.onrender.com/products?limit=${limit}`;
     const apiKey = '87909682e6cd74208f41a6ef39fe4191';
 
   useEffect(() => {
@@ -12,11 +13,15 @@ function PhoneGrid() {
         headers: {
             'x-api-key': apiKey 
         }
-    }
-        
-    )
+    })
       .then((response) => response.json())
-      .then((data) => setProducts(data))
+      .then((data) => {
+        const uniqueProducts = Array.from(
+          new Map(data.map(product => [product.id, product])).values()
+        );
+          
+        setProducts(uniqueProducts.slice(0, 20));
+      })
       .catch((error) => console.error('Error al obtener productos:', error));
   }, []);
 
@@ -25,7 +30,7 @@ function PhoneGrid() {
     <h1 className='grid_title'>Phone grid</h1>
     <div className='container'>
             <ul className='grid'>
-                {products?.map((product) => (
+                {uniqueProducts?.map((product) => (
                 <div className='grid_card' key={product.id}>
                     <div className='grid_card_wrapper'>
                         <img className='grid_card_image' src={product.imageUrl} alt={product.name} />
