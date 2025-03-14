@@ -7,7 +7,7 @@ function PhoneGrid() {
   const [uniqueProducts, setProducts] = useState([]);
 
   useEffect(() => {
-      fetchProducts(20)
+      fetchProducts(30)
         .then(products => {
           setProducts(products.slice(0,20));
         });
