@@ -1,22 +1,36 @@
-const apiUrl = `https://prueba-tecnica-api-tienda-moviles.onrender.com/products?limit=`;
-const apiKey = '87909682e6cd74208f41a6ef39fe4191';
+const API_URL = `https://prueba-tecnica-api-tienda-moviles.onrender.com/products`;
+const API_KEY = '87909682e6cd74208f41a6ef39fe4191';
 
-export const fetchProducts = (limit) => {
+export async function fetchProducts(limit) {
 
-    return fetch(`${apiUrl}${limit}`, {
-        method: 'GET',
+    let response = await fetch(`${API_URL}?limit=${limit}`, {
+        method: 'GET', 
         headers: {
-            'x-api-key': apiKey 
+            'x-api-key': API_KEY
         }
-    })
-    .then((response) => response.json())
-    .then((data) => filterUniqueProducts(data))
-    .catch((error) => console.error('Error al obtener productos:', error));
-};
+    });
+
+    let data = await response.json();
+    data = filterUniqueProducts(data);
+    return data;
+}
+
+export async function fetchProductById(id) {
+
+    let response = await fetch(`${API_URL}/${id}`, {
+        method: 'GET', 
+        headers: {
+            'x-api-key': API_KEY
+        }
+    });
+    
+    const data =  await response.json();
+    return data;
+}
 
 function filterUniqueProducts(data){
     const uniqueProducts = Array.from(
         new Map(data.map(product => [product.id, product])).values()
     );
     return uniqueProducts;
-}
+};
