@@ -1,18 +1,23 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route} from 'react-router'
+
+import { PhoneProvider } from './context/PhoneContext'
 import App from './App'
+import PhoneDetail from './components/PhoneDetail/PhoneDetail'
+
 import './index.css'
 import './components/PhoneGrid/PhoneGrid.scss'
-import PhoneDetail from './components/PhoneDetail/PhoneDetail'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-        <Routes>
-          <Route path='/' element = {<App />} />  
-          <Route path='/phones/:id' element = {<PhoneDetail />} />
-        </Routes>
-    </BrowserRouter>
+    <PhoneProvider>
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element = {<App />} />  
+            <Route path='/phones/:id' element = {<PhoneDetail />} />
+          </Routes>
+      </BrowserRouter>
+    </PhoneProvider>
   </StrictMode>,
 )
