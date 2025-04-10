@@ -1,0 +1,16 @@
+.similar_products{
+    
+    &_wrapper {
+
+    }   
+
+    &_grid{
+        display: inline-flex;
+        flex-direction: row;
+
+        .grid_card{
+
+        }
+    }
+}
+
