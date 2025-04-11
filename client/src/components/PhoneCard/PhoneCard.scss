@@ -3,21 +3,74 @@
 .grid{
 
     &_card{
-        width: 300px;
-        height: auto;
-        border: 1px solid;
-        padding: 30px;
+        width: 18.75rem;
+        height: 18.75rem;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: $font-weight-light;
+        align-content: center;
+        justify-content: center;
+        border-collapse: collapse;
+        border: 0.5px solid;
+        margin-top: -0.5px;
+        margin-bottom: -0.5px;
+        margin-right: -0.5px;
+        margin-left: -0.5px;
+        border-right: 0.5px solid;
+        border-bottom: 0.5px solid;
+
 
         &_image{
-            height: 200px;
-            width: 200px;
+            height: 257px;
+            width: 312px;
             object-fit: contain;
+            align-self: center;
         }
 
         &_brand{
             color: $color-secondary;
+            margin: 0;
+        }
+
+        &_info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+
+            &_brand{
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                font-size: $font-size-brand;
+
+            }
+
+            &_name{
+                font-size: $font-size-name;
+            }
+        }
+
+        &_price{
+            display: flex;
+            align-self: flex-end;
+        }
+
+        .phone_link{
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+            width: 100%;
         }
 
     
+    }
+
+    .box{
+        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-sizing: content-box;
     }
 }

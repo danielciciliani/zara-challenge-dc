@@ -1,15 +1,9 @@
 @use '../../index.scss' as *;
 
-.grid{
+.container{
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-
-    &_title{
-        line-height: 1.1;
-        text-align: center;
-        padding-bottom: 100px;
-    }
 }
 
 

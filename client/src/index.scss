@@ -5,8 +5,8 @@ $light-gray: #AAAAAA;
 $font-family: Helvetica Neue, Arial, sans-serif;
 $font-weight-light: 300;
 $line-height-base: 1;
-$font-size-big: 15px;
-$font-size-mid: 12px;
+$font-size-big: 12px;
+$font-size-mid: 10px;
 
 $color-primary: $black;
 $color-secondary: $dark-gray;
@@ -33,9 +33,15 @@ $font-size-brand: $font-size-mid;
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  // place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-size: $font-size-big;
+
+  h2{
+    font-size: $font-size-big;
+    font-weight: $font-weight-light;
+  }
 }
 
 button{

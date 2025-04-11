@@ -16,13 +16,14 @@ function PhoneGrid() {
 
   return (
     <>
-    <h1 className='grid_title'>Phone grid</h1>
     <div className='container'>
-      <ul className='grid'>
+      <div className='grid'>
+        <div className="box">
           {phones?.map((product) => (
             <PhoneCard key={product.id} product={product} />
           ))}
-      </ul>
+        </div>
+      </div>
     </div>
     </>
   )
