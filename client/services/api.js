@@ -28,7 +28,8 @@ export async function fetchProductById(id) {
     return data;
 }
 
-function filterUniqueProducts(data){
+export function filterUniqueProducts(data){
+    
     const uniqueProducts = Array.from(
         new Map(data.map(product => [product.id, product])).values()
     );
