@@ -1,4 +1,66 @@
+@use '../../index.scss' as *;
+
 .back{
     display: flex;
     justify-content: flex-start;
+}
+
+.phoneDetail{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    align-content: center;
+    align-items: center;
+
+    .container{
+        width: 62vw;
+    }
+    
+    &_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 15rem;
+        margin-top: 30px;
+    }
+    
+
+    &_image{
+        min-height: 460px;
+        width: auto;
+        height: 460px;
+        border: 0.5px solid $border-light;
+        margin-right: 40px;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &_info{
+        width: 31%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: $font-size-info;
+
+        &-price{
+            font-size: $font-size-h2;
+            
+            .animated_price{
+                opacity: 0;
+                animation: fadeIn 0.5s ease-in-out forwards;
+
+                @keyframes fadeIn {
+                    to {
+                    opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
