@@ -1,13 +1,29 @@
+@use '../../index.scss' as *;
+
 .storage_selector{
     &_wrapper{
         display: flex;
         flex-direction: row;
+        padding: 0;
     }
 
     &_option {
-        border: 0.5px solid;
-        padding: 1rem;
+        border: 1px solid $border-light;
+        padding: 1.5rem;
         cursor: pointer;
         list-style: none;
+        min-width: 50px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        transition: border $main-transition;        
+
+        &:hover{
+            border: 1px solid $black;
+        }
+
+        &.selected{
+            border: 1px solid $black;
+        }
     }
 }
