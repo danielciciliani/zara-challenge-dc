@@ -1,0 +1,24 @@
+@use "../../index.scss" as *;
+
+.addToCard_button {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: $toUpper;
+    text-decoration-line: none;
+    transition: background-color $longer-transition, color $longer-transition;
+
+    &.inactive{
+        background-color: $button-bg-inactive;
+        color: $button-inactive;
+    }
+
+    &.active{
+        background-color: $button-bg-active;
+        color: $button-active;
+    }
+
+}

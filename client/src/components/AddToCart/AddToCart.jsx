@@ -1,8 +1,13 @@
+import PhoneDetail from "../PhoneDetail/PhoneDetail";
 
-function AddToCart(){
+import "./AddToCart.scss";
+
+function AddToCart({isActive}){
    
     return (
-        <button>Add</button>
+        <div className={`addToCard_button ${isActive ? "active" : "inactive"}`}>
+            Añadir
+        </div>
     );
 }
 
