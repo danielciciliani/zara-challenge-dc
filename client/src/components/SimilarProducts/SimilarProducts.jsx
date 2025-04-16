@@ -1,13 +1,17 @@
+import { filterUniqueProducts } from "../../../services/api";
+
 import PhoneCard from "../PhoneCard/PhoneCard";
 
 import "./SimilarProducts.scss";
 
 function SimilarProducts({ similarProducts }) {
 
+    const uniqueProducts = filterUniqueProducts(similarProducts);
+
     return(
         <div className="similar_products_wrapper">
             <ul className='similar_products_grid'>
-                {similarProducts?.map((product) => (
+                {uniqueProducts?.map((product) => (
                     <PhoneCard key={product.id} product={product} />
                 ))}
             </ul>
