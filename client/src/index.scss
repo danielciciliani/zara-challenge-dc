@@ -2,18 +2,35 @@ $white: #fafafa;
 $black: #000000;
 $dark-gray: #79736D;
 $light-gray: #AAAAAA;
+$border-light: #CCCCCC;
+$button-bg-inactive: #F3F2F2;
+$button-inactive: #C2BFBC;
+$button-bg-active: #1B1A18;
+$button-active: white;
+
+
+
 $font-family: Helvetica Neue, Arial, sans-serif;
 $font-weight-light: 300;
 $line-height-base: 1;
+$font-size-huge: 14px;
 $font-size-big: 12px;
 $font-size-mid: 10px;
+$font-size-h1: 24px;
+$font-size-h2: 20px;
+
 
 $color-primary: $black;
 $color-secondary: $dark-gray;
 $color-tertiary: $light-gray;
 $font-size-name: $font-size-big;
 $font-size-brand: $font-size-mid;
+$font-size-info: $font-size-huge;
 
+$toUpper: uppercase;
+
+$main-transition: 0.3s ease;
+$longer-transition: 0.5s ease;
 
 
 :root {
@@ -38,12 +55,31 @@ body {
   min-height: 100vh;
   font-size: $font-size-big;
 
+  h1{
+    font-size: $font-size-h1;
+    font-weight: $font-weight-light;
+  }
+
+
   h2{
     font-size: $font-size-big;
     font-weight: $font-weight-light;
   }
+
+  a{
+    text-decoration: none;
+  }
+
+  li{
+    list-style-type: none;
+  }
+
+  button{
+    cursor: pointer;
+  }
 }
 
-button{
-  cursor: pointer;
+
+.to_upper{
+  text-transform: $toUpper;
 }
