@@ -1,5 +1,12 @@
+@use '../../index.scss' as *;
+
 .similar_products{
-    
+
+    &_title{
+        text-transform: $toUpper;
+        font-size: $font-size-h2;
+    }
+
     &_wrapper {
 
     }   
@@ -7,6 +14,7 @@
     &_grid{
         display: inline-flex;
         flex-direction: row;
+        padding: 0;
 
         .grid_card{
 
