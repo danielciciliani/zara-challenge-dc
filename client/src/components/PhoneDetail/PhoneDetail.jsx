@@ -9,7 +9,7 @@ import AddToCart from "../AddToCart/AddToCart";
 import SimilarProducts from "../SimilarProducts/SimilarProducts";
 import ColorSelector from "../ColorSelector/ColorSelector";
 import StorageSelector from "../StorageSelector/StorageSelector";
-
+import Specs from "../Specs/Specs";
 
 import "./../BackToGrid/BackToGrid.scss";
 import "./PhoneDetail.scss"
@@ -34,14 +34,12 @@ function PhoneDetail() {
     }, []);
 
     const productBasicData = isPhonesLoaded ? phones.find((phone) => phone.id === id) : null;
-    console.log("productos obtenidos:", productBasicData);
 
     useEffect(() => {
         fetchProductById(id)
             .then((productDetail) => {
                 setProductDetail(productDetail);
             })
-
     }, [id]);
 
     useEffect(() => {
@@ -60,10 +58,11 @@ function PhoneDetail() {
         return basePrice + storagePrice;
     };
 
-
     if (!productDetail) {
         return <p>Loading product detail...</p>    
     }
+
+    const specs = productDetail?.specs;
 
     return (
         <>
@@ -117,12 +116,13 @@ function PhoneDetail() {
                             </div>
                         </div>
                     </div>
-
+                    <div className="specs">
+                        <Specs specs={specs} productBasicData={productBasicData} productDetail={productDetail}/>
+                    </div>
+                    <div className="similiar_products">
+                            <SimilarProducts similarProducts={productDetail.similarProducts}/>
+                    </div>
                 </div>
-                <p>{productDetail.description}</p>
-            </div>
-            <div className="similiar_products">
-                    <SimilarProducts similarProducts={productDetail.similarProducts}/>
             </div>
         </>
     );
