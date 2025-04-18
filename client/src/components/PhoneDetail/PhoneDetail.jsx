@@ -23,6 +23,7 @@ function PhoneDetail() {
     const { phones, loadPhones} = usePhoneContext();
     const [isPhonesLoaded, setIsPhonesLoaded] = useState(false);
     const current = 'EUR';
+    const placeholderImage = "../../public/placeholder_MBST_4.png";
 
     
     useEffect(() => {
@@ -76,7 +77,7 @@ function PhoneDetail() {
                     <div className="phoneDetail_wrapper">
                         <div className="phoneDetail_image">
                             <img className='grid_card_image' src={
-                                productBasicData?.imageUrl || " "
+                                productBasicData?.imageUrl || placeholderImage
                             } alt={productDetail.name} />
                         </div>
                         <div className="phoneDetail_info">
