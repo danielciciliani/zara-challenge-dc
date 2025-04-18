@@ -31,4 +31,21 @@
         cursor: pointer;
         list-style-type: none;       
     }
+
+    &_name{
+        font-size: $font-size-big;
+        padding-bottom: 2rem;
+        height: 1rem;
+    }
+}
+
+.animated_color{
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+
+    @keyframes fadeIn {
+        to {
+        opacity: 1;
+        }
+    }
 }
