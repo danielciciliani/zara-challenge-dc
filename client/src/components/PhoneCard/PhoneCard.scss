@@ -93,7 +93,7 @@
 
                 &_name{
                     font-size: $font-size-name;
-                    transition: color 0.7s ease-in-out;                
+                    transition: color $longest-transition;                
                 }
             }
         }
@@ -101,7 +101,7 @@
         &_price{
             display: flex;
             align-self: flex-end;
-            transition: color 0.7s ease-in-out;                
+            transition: color $longest-transition;                
         }
 
         .phone_link{

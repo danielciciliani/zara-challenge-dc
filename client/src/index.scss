@@ -1,4 +1,5 @@
-$white: #fafafa;
+$dark-white: #fafafa;
+$white: #ffffff;
 $black: #000000;
 $dark-gray: #79736D;
 $light-gray: #AAAAAA;
@@ -31,15 +32,16 @@ $toUpper: uppercase;
 
 $main-transition: 0.3s ease;
 $longer-transition: 0.5s ease;
+$longest-transition: 0.7s ease;
 
 
 :root {
+  width: 100%;
   font-family: $font-family;
   line-height: $line-height-base;
   font-weight: $font-weight-light;
-  color: black;
-  background-color: white;
-
+  color: $black;
+  background-color: $white;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,8 +51,6 @@ $longer-transition: 0.5s ease;
 
 body {
   margin: 0;
-  display: flex;
-  // place-items: center;
   min-width: 320px;
   min-height: 100vh;
   font-size: $font-size-big;
