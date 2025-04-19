@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import './App.css'
+import './App.scss'
 import PhoneGrid from './components/phoneGrid/phoneGrid'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <PhoneGrid />
+    <>
+      <div className="container_app">
+        <PhoneGrid />
+      </div>
+    </>
   )
 }
 
