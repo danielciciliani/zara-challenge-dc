@@ -1,9 +1,9 @@
 const API_URL = `https://prueba-tecnica-api-tienda-moviles.onrender.com/products`;
 const API_KEY = '87909682e6cd74208f41a6ef39fe4191';
 
-export async function fetchProducts(limit) {
+export async function fetchProducts(limit, searchTerm='') {
 
-    let response = await fetch(`${API_URL}?limit=${limit}`, {
+    let response = await fetch(`${API_URL}?limit=${limit}&search=${searchTerm}`, {
         method: 'GET', 
         headers: {
             'x-api-key': API_KEY

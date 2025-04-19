@@ -7,8 +7,8 @@ export const PhoneProvider = ({ children }) => {
     const [phones, setPhones] = useState([]);
     const [selectedPhone, setSelectedPhone] = useState(null);
 
-    const loadPhones = async () => {
-        const products = await fetchProducts(30);
+    const loadPhones = async (searchTerm = '') => {
+        const products = await fetchProducts(30, searchTerm);
         setPhones(products.slice(0, 20));
     };
     

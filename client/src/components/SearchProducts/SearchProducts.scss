@@ -1,0 +1,29 @@
+@use '../../index.scss' as *;
+
+.search_bar{
+    margin-top: 5rem;
+    height: 126px;
+    padding: 0 100px;
+
+    &_input{
+        border: none;        
+        border-bottom: 0.5px solid $black;
+        width: 100%;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &_results{
+        text-transform: $toUpper;
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards;
+
+        @keyframes fadeIn {
+            to {
+            opacity: 1;
+            }
+        }
+    }
+}

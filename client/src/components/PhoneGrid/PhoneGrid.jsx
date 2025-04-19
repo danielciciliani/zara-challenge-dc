@@ -1,30 +1,40 @@
 import { useEffect, useState } from 'react'
 import { usePhoneContext } from '../../context/PhoneContext';
 import PhoneCard from '../PhoneCard/PhoneCard';
-import { fetchProducts } from '../../../services/api';
+import SearchProducts from '../SearchProducts/SearchProducts';
 import './PhoneGrid.scss';
 
 function PhoneGrid() {
-  const [uniqueProducts, setProducts] = useState([]);
   const { phones, loadPhones} = usePhoneContext();
+  const [searchTerm, setSearchTerm] = useState('');
 
 
   useEffect(() => {
-    loadPhones();
-  }, []);
+    loadPhones(searchTerm);
+  }, [searchTerm]);
 
+  const filteredProducts = phones.filter(product => 
+    ((product.name.toLowerCase().includes(searchTerm.toLowerCase())) || 
+      (product.brand.toLowerCase().includes(searchTerm.toLowerCase()))
+    ));
+
+    let searchResults = filteredProducts.length; 
+    console.log("resultados", filteredProducts.length);
 
   return (
     <>
-    <div className='container'>
-      <div className='grid'>
-        <div className="box">
-          {phones?.map((product) => (
-            <PhoneCard key={product.id} product={product} />
-          ))}
+      <div className="searchbar">
+        <SearchProducts searchTerm={searchTerm} setSearchTerm={setSearchTerm} searchResults={searchResults}/>
+      </div>
+      <div className='container'>
+        <div className='grid'>
+          <div className="box">
+            {filteredProducts.map((product) => (
+              <PhoneCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </>
   )
 }
