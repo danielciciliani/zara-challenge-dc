@@ -10,10 +10,12 @@
     text-transform: $toUpper;
     text-decoration-line: none;
     transition: background-color $longer-transition, color $longer-transition;
+    cursor: pointer;
 
     &.inactive{
         background-color: $button-bg-inactive;
         color: $button-inactive;
+        cursor: not-allowed;
     }
 
     &.active{

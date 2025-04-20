@@ -20,6 +20,7 @@ function PhoneDetail() {
     const [productDetail, setProductDetail] = useState(null);
     const [selectedStorage, setSelectedStorage] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
+    const [addedProducts, setAddedProducts] = useState(0);
     const isOkToAdd = selectedColor && selectedStorage;
     const { phones, loadPhones} = usePhoneContext();
     const [isPhonesLoaded, setIsPhonesLoaded] = useState(false);
@@ -66,10 +67,16 @@ function PhoneDetail() {
 
     const specs = productDetail?.specs;
 
+    
+
+    function addToCart(){
+        setAddedProducts(addedProducts + 1);
+    }
+
     return (
         <>
         <div className="container_app">
-        <TopBar />
+        <TopBar addedProducts={addedProducts} />
              <div className="back">
                 <Link to={'/'}>
                     <BackToGrid />
@@ -114,9 +121,7 @@ function PhoneDetail() {
                                 />
                             </div>
                             <div>
-                                <Link to={'/'}>
-                                    <AddToCart isActive={isOkToAdd} />
-                                </Link>
+                                <AddToCart isActive={isOkToAdd} addToCart={addToCart} addedProducts={addedProducts}/>
                             </div>
                         </div>
                     </div>

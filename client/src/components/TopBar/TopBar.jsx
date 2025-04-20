@@ -1,7 +1,9 @@
 import {Link} from "react-router";
 import "./TopBar.scss";
+import "./../PhoneDetail/PhoneDetail"
 
-function TopBar(){
+
+function TopBar({addedProducts}){
     const logo = "./../public/logo_MBST.svg";
     const bagIcon = "./../public/bag_icon.svg";
     
@@ -17,7 +19,7 @@ function TopBar(){
                 <Link to={'/'}>
                     <div className="topbar_bag">
                         <img className="topbar_bag_image" src={bagIcon} alt="bag icon" />
-                        <p className="topbar_bag_number">0</p>
+                        <p className="topbar_bag_number">{addedProducts}</p>
                     </div>
                 </ Link>
             </div>
