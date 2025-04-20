@@ -16,10 +16,6 @@ const specsToShow = {
     screenRefreshRate: specs?.screenRefreshRate || "N/A",
 };
 
-// (specs) ? console.log('han llegado', specs) : console.log("no ha llegado");
-
-(specsToShow) ? console.log('han llegado para mostrar', specsToShow) : console.log("no llego nada");
-
     return (
         <>
             <p className="specs_title">Specifications</p>

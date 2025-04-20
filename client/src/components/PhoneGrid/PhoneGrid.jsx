@@ -19,7 +19,6 @@ function PhoneGrid() {
     ));
 
     let searchResults = filteredProducts.length; 
-    console.log("resultados", filteredProducts.length);
 
   return (
     <>
