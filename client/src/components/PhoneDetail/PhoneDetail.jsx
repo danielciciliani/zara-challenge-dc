@@ -13,6 +13,7 @@ import Specs from "../Specs/Specs";
 
 import "./../BackToGrid/BackToGrid.scss";
 import "./PhoneDetail.scss"
+import TopBar from "../TopBar/TopBar";
 
 function PhoneDetail() {
     const { id } = useParams();
@@ -67,6 +68,8 @@ function PhoneDetail() {
 
     return (
         <>
+        <div className="container_app">
+        <TopBar />
              <div className="back">
                 <Link to={'/'}>
                     <BackToGrid />
@@ -125,6 +128,7 @@ function PhoneDetail() {
                     </div>
                 </div>
             </div>
+        </div>
         </>
     );
 }

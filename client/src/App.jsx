@@ -1,7 +1,11 @@
-import { useState } from 'react'
-import './App.scss'
-import './index.scss'
-import PhoneGrid from './components/phoneGrid/phoneGrid'
+import { useState } from 'react';
+
+import PhoneGrid from './components/phoneGrid/phoneGrid';
+import TopBar from './components/TopBar/TopBar';
+
+import './App.scss';
+import './index.scss';
+import './components/TopBar/TopBar.scss';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +13,7 @@ function App() {
   return (
     <>
       <div className="container_app">
+        <TopBar />
         <PhoneGrid />
       </div>
     </>

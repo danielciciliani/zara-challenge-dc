@@ -1,0 +1,30 @@
+@use '../../index.scss' as *;
+
+.topbar{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_logo{
+
+    }
+
+    &_bag{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        &_image{
+            height: 16px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        &_number{
+            padding-left: 8px;
+            font-size: $font-size-topbar;
+        }
+    }
+}
