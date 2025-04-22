@@ -75,7 +75,7 @@ function PhoneDetail() {
 
     return (
         <>
-        <div className="container_app">
+        <div className="app_container">
             <TopBar addedProducts={addedProducts} />
              <div className="back">
                 <Link to={'/'}>
@@ -83,7 +83,7 @@ function PhoneDetail() {
                 </Link>
             </div>
             <div className="phoneDetail">
-                <div className="container">
+                <div className="phoneDetail_container">
                     <div className="phoneDetail_wrapper">
                         <div className="phoneDetail_image">
                             <img className='grid_card_image' src={
@@ -128,10 +128,10 @@ function PhoneDetail() {
                     <div className="specs">
                         <Specs specs={specs} productBasicData={productBasicData} productDetail={productDetail}/>
                     </div>
-                    <div className="similiar_products">
-                            <SimilarProducts similarProducts={productDetail.similarProducts}/>
-                    </div>
                 </div>
+            </div>
+            <div className="similiar_products">
+                    <SimilarProducts similarProducts={productDetail.similarProducts}/>
             </div>
         </div>
         </>

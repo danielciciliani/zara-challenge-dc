@@ -35,6 +35,9 @@ $main-transition: 0.3s ease;
 $longer-transition: 0.5s ease;
 $longest-transition: 0.7s ease;
 
+$breakpoint-tablet: 834px;
+$breakpoint-mobile: 428px;
+
 
 :root {
   width: 100%;
@@ -53,8 +56,9 @@ $longest-transition: 0.7s ease;
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  // min-height: 100vh;
   font-size: $font-size-big;
+  scroll-behavior: smooth;
 
   h1{
     font-size: $font-size-h1;

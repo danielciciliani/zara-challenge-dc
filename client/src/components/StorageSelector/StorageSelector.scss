@@ -27,3 +27,13 @@
         }
     }
 }
+
+@media (max-width: $breakpoint-mobile) {
+    .storage_selector{
+        
+        &_option{
+            padding: 1.1rem;
+            min-width: 48px;   
+        }
+    }
+}

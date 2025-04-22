@@ -19,7 +19,7 @@
     align-items: center;
     margin-top: 10rem;
 
-    .container{
+    &_container{
         width: 62vw;
         flex-direction: column;
     }
@@ -66,6 +66,7 @@
             }
         }
     }
+}
 
     .similiar_products{
         margin-top: 150px;
@@ -74,5 +75,64 @@
 
     .specs{
         margin-top: 15rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+
+    .phoneDetail{
+        
+        &_container { 
+            width: 100%;
+        }
+
+        &_image{
+            min-height: 90%;
+            height: 90%;
+            display: flex;
+            align-self: center;
+        }
+
+        &_info{
+            width: 48%;
+        }
+    }
+
+        .specs{
+            margin-top: 8rem;
+        }
+
+        .similiar_products{
+            margin-top: 150px;
+            margin-bottom: 80px;
+        }
+    }
+    
+    @media (max-width: $breakpoint-mobile) {
+    
+    .phoneDetail{
+
+        &_wrapper{
+            flex-direction: column;
+        }
+
+        &_image{
+
+            img{
+                margin-top: 0;
+            }
+        }
+
+        &_info{
+            width: 100%;
+            font-size: $font-size-big;
+
+            &-name{
+                font-size: $font-size-h2;
+            }
+
+            &-price{
+                font-size: $font-size-huge;
+            }
+        }
     }
 }

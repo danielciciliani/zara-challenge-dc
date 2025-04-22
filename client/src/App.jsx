@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div className="container_app">
+      <div className="app_container">
         <TopBar addedProducts={addedProducts} />
         <PhoneGrid />
       </div>

@@ -28,3 +28,13 @@
         width: 28%;
     }
 }
+
+@media (max-width: $breakpoint-tablet) {
+    
+    .specs_table{
+
+        &_key{
+            width: 46%;
+        }
+    }
+}

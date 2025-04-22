@@ -24,3 +24,18 @@
     }
 
 }
+
+
+@media (max-width: $breakpoint-tablet) {
+    .addToCard_button {
+        width: 260px;
+    }
+
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .addToCard_button {
+        width: 100%;
+    }
+}
+
