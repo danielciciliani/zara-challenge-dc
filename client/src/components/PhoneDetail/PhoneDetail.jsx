@@ -76,7 +76,7 @@ function PhoneDetail() {
     return (
         <>
         <div className="container_app">
-        <TopBar addedProducts={addedProducts} />
+            <TopBar addedProducts={addedProducts} />
              <div className="back">
                 <Link to={'/'}>
                     <BackToGrid />

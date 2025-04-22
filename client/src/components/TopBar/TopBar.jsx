@@ -11,17 +11,19 @@ function TopBar({addedProducts}){
     return (
         <>
             <div className="topbar">
-                <Link to={'/'}>
-                    <div className="topbar_logo">
-                        <img src={logo} alt="logo MTSB" />
-                    </div>
-                </Link>
-                <Link to={'/'}>
-                    <div className="topbar_bag">
-                        <img className="topbar_bag_image" src={bagIcon} alt="bag icon" />
-                        <p className="topbar_bag_number">{addedProducts}</p>
-                    </div>
-                </ Link>
+                <div className="topbar_wrapper">
+                    <Link to={'/'}>
+                        <div className="topbar_wrapper_logo">
+                            <img src={logo} alt="logo MTSB" />
+                        </div>
+                    </Link>
+                    <Link to={'/'}>
+                        <div className="topbar_wrapper_bag">
+                            <img className="topbar_wrapper_bag_image" src={bagIcon} alt="bag icon" />
+                            <p key={addedProducts} className="topbar_wrapper_bag_number animated_number">{addedProducts}</p>
+                        </div>
+                    </ Link>
+                </div>
             </div>
         </>
     );

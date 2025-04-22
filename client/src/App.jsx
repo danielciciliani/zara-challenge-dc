@@ -8,13 +8,12 @@ import './index.scss';
 import './components/TopBar/TopBar.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
   const [addedProducts, setAddedProducts] = useState(0);
 
   return (
     <>
       <div className="container_app">
-        <TopBar addedProducts={addedProducts}  />
+        <TopBar addedProducts={addedProducts} />
         <PhoneGrid />
       </div>
     </>

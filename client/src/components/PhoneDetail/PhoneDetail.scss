@@ -3,6 +3,13 @@
 .back{
     display: flex;
     justify-content: flex-start;
+    height: 44px;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
 }
 
 .phoneDetail{
@@ -10,6 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10rem;
 
     .container{
         width: 62vw;
@@ -21,7 +29,6 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        padding-bottom: 12rem;
     }
     
 
@@ -49,7 +56,7 @@
             
             .animated_price{
                 opacity: 0;
-                animation: fadeIn 0.5s ease-in-out forwards;
+                animation: fadeIn 0.3s ease-in-out forwards;
 
                 @keyframes fadeIn {
                     to {
@@ -63,5 +70,9 @@
     .similiar_products{
         margin-top: 150px;
         margin-bottom: 190px;
+    }
+
+    .specs{
+        margin-top: 15rem;
     }
 }

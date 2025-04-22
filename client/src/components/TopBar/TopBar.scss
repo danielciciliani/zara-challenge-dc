@@ -1,32 +1,56 @@
 @use '../../index.scss' as *;
 
 .topbar{
-    height: 80px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: $black;
-
-    &_logo{
-
-    }
-
-    &_bag{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    
+    .topbar_wrapper{
+        height: 80px;
+        width: auto;
         display: flex;
-        flex-direction: row;
-        align-items: baseline;
-
-        &_image{
-            height: 16px;
-            width: auto;
-            object-fit: contain;
+        align-items: center;
+        justify-content: space-between;
+        color: $black;
+        padding-left: 100px;
+        padding-right: 100px;
+        z-index: 10;
+    
+        &_logo{
+    
         }
-
-        &_number{
-            padding-left: 8px;
-            font-size: $font-size-topbar;
-            color: $black;
+    
+        &_bag{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            &_image{
+                height: 18px;
+                width: auto;
+                object-fit: contain;
+            }
+    
+            &_number{
+                padding-left: 8px;
+                font-size: $font-size-topbar;
+                color: $black;
+            }
         }
+    }
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .topbar_wrapper{
+       background-color: red;
     }
 }
