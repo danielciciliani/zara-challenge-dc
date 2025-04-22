@@ -17,7 +17,7 @@ function TopBar({addedProducts}){
                             <img src={logo} alt="logo MTSB" />
                         </div>
                     </Link>
-                    <Link to={'/'}>
+                    <Link to={'/cart'}>
                         <div className="topbar_wrapper_bag">
                             <img className="topbar_wrapper_bag_image" src={bagIcon} alt="bag icon" />
                             <p key={addedProducts} className="topbar_wrapper_bag_number animated_number">{addedProducts}</p>

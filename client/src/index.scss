@@ -4,6 +4,7 @@ $black: #000000;
 $dark-gray: #79736D;
 $light-gray: #AAAAAA;
 $border-light: #CCCCCC;
+$border-dark: #1B1A18;
 $button-bg-inactive: #F3F2F2;
 $button-inactive: #C2BFBC;
 $button-bg-active: #1B1A18;
@@ -37,6 +38,24 @@ $longest-transition: 0.7s ease;
 
 $breakpoint-tablet: 834px;
 $breakpoint-mobile: 428px;
+
+@mixin basic-button {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: $toUpper;
+  text-decoration-line: none;
+  transition: background-color $longer-transition, color $longer-transition;
+  cursor: pointer;
+}
+
+@mixin basic-border{
+  border: 0.5px solid black;
+}
+
 
 
 :root {

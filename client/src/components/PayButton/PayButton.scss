@@ -1,0 +1,8 @@
+@use "../../index.scss" as *;
+
+.pay_button{
+    @include basic-button;
+    background-color: $black;
+    color: white;
+    width: 260px;
+}
