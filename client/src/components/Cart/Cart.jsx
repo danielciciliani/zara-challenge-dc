@@ -5,9 +5,11 @@ import PayButton from "../PayButton/PayButton";
 import PhoneCard from "../PhoneCard/PhoneCard";
 import TopBar from "../TopBar/TopBar";
 import "./Cart.scss";
+import { getPlaceholder } from "../../../services/api";
 
 function Cart() {
     const [addedProducts] = useState(0);
+    const placeholderImage = getPlaceholder();
 
     return (
         <>
@@ -18,7 +20,7 @@ function Cart() {
                     <div className="cart_phone-card_wrapper">
                         <div className="cart_phone-card">
                             <div className="cart_phone-card_image">
-                                <img src="" alt="" />
+                                <img src={placeholderImage} alt="" />
                             </div>
                             <div className="cart_phone-card_info">
                                 <div className="cart_phone-card_info_wrapper">

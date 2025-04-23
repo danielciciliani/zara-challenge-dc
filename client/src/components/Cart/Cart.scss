@@ -22,7 +22,12 @@
         &_image{
             width: 245px;
             height: 245px;
-            border: 0.5px solid;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
         }
 
         &_wrapper{

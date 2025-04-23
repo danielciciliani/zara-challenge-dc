@@ -1,7 +1,7 @@
 import { useEffect, useState} from "react";
 import { Link, useParams } from "react-router";
 
-import { fetchProductById } from "../../../services/api";
+import { fetchProductById, getPlaceholder } from "../../../services/api";
 import { usePhoneContext } from "../../context/PhoneContext";
 
 import BackToGrid from "../BackToGrid/BackToGrid";
@@ -10,10 +10,10 @@ import SimilarProducts from "../SimilarProducts/SimilarProducts";
 import ColorSelector from "../ColorSelector/ColorSelector";
 import StorageSelector from "../StorageSelector/StorageSelector";
 import Specs from "../Specs/Specs";
+import TopBar from "../TopBar/TopBar";
 
 import "./../BackToGrid/BackToGrid.scss";
 import "./PhoneDetail.scss"
-import TopBar from "../TopBar/TopBar";
 
 function PhoneDetail() {
     const { id } = useParams();
@@ -25,7 +25,7 @@ function PhoneDetail() {
     const { phones, loadPhones} = usePhoneContext();
     const [isPhonesLoaded, setIsPhonesLoaded] = useState(false);
     const current = 'EUR';
-    const placeholderImage = "../../public/placeholder_MBST_4.png";
+    const placeholderImage = getPlaceholder();
 
     
     useEffect(() => {
