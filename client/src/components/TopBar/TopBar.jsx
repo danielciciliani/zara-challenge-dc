@@ -9,6 +9,7 @@ const bagIcon = "./../public/bag_icon.svg";
 const bagIconFilled = "./../public/bag_icon_filled.svg";
 
 function TopBar(){
+    
     const {addedProducts} = useCartContext();
 
     return (

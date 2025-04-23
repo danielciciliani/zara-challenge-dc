@@ -4,12 +4,18 @@ import TopBar from "../TopBar/TopBar";
 import { getPlaceholder } from "../../../services/api";
 import { useCartContext } from "../../context/CartContext";
 import "./Cart.scss";
+import { useEffect } from "react";
 
 
 function Cart() {
     const placeholderImage = getPlaceholder();
     const currency = 'EUR';
-    const {addedProducts} = useCartContext();
+    const {addedProducts, setAddedProducts} = useCartContext();
+
+    function deleteProducts(){
+        localStorage.removeItem("addedProducts");
+        setAddedProducts(0);
+    }
 
     return (
         <>
@@ -29,7 +35,9 @@ function Cart() {
                                     <p className="price">1199 EUR</p>
                                 </div>
                                 <div className="cart_phone-card_delete">
-                                    <p className="delete_button">Eliminar</p>
+                                    <p className="delete_button"
+                                        onClick={deleteProducts}
+                                    >Eliminar</p>
                                 </div>
                             </div>
                         </div>
