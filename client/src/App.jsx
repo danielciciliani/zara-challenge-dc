@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import PhoneGrid from './components/phoneGrid/phoneGrid';
+import PhoneGrid from './components/PhoneGrid/PhoneGrid';
 import TopBar from './components/TopBar/TopBar';
 
 import './App.scss';
