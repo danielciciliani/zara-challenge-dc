@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+
+import PhoneGrid from './components/phoneGrid/phoneGrid';
+import TopBar from './components/TopBar/TopBar';
+
+import './App.scss';
+import './index.scss';
+import './components/TopBar/TopBar.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [addedProducts, setAddedProducts] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="app_container">
+        <TopBar addedProducts={addedProducts} />
+        <PhoneGrid />
       </div>
-      <h1>Zara Challenge DC</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

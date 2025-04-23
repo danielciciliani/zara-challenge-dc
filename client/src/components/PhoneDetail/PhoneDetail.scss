@@ -1,0 +1,134 @@
+@use '../../index.scss' as *;
+
+.back {
+  display: flex;
+  justify-content: flex-start;
+  height: 44px;
+  align-items: center;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+}
+
+.phoneDetail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+
+  &_container {
+    width: 62vw;
+    flex-direction: column;
+  }
+
+  &_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &_image {
+    min-height: 460px;
+    width: auto;
+    height: 460px;
+    margin-right: 40px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_info {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: $font-size-info;
+
+    &-price {
+      font-size: $font-size-h2;
+
+      .animated_price {
+        opacity: 0;
+        animation: fadeIn 0.3s ease-in-out forwards;
+
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.similiar_products {
+  margin-top: 150px;
+  margin-bottom: 190px;
+}
+
+.specs {
+  margin-top: 15rem;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .phoneDetail {
+    &_container {
+      width: 100%;
+    }
+
+    &_image {
+      min-height: 90%;
+      height: 90%;
+      display: flex;
+      align-self: center;
+    }
+
+    &_info {
+      width: 48%;
+    }
+  }
+
+  .specs {
+    margin-top: 8rem;
+  }
+
+  .similiar_products {
+    margin-top: 150px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .phoneDetail {
+    margin-top: 7rem;
+
+    &_wrapper {
+      flex-direction: column;
+    }
+
+    &_image {
+      img {
+        margin-top: 0;
+      }
+    }
+
+    &_info {
+      width: 100%;
+      font-size: $font-size-big;
+
+      &-name {
+        font-size: $font-size-h2;
+      }
+
+      &-price {
+        font-size: $font-size-huge;
+      }
+    }
+  }
+}

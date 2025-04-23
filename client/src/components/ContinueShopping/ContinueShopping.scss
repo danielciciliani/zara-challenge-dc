@@ -1,0 +1,14 @@
+@use '../../index.scss' as *;
+
+.continue-shopping_button {
+  @include basic-button;
+  border: 0.5px solid $border-dark;
+  color: $black;
+  width: 260px;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .continue-shopping_button {
+    width: 170px;
+  }
+}

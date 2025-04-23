@@ -1,0 +1,121 @@
+@use '../../index.scss' as *;
+
+.cart {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_title {
+    padding-top: 3rem;
+    text-transform: $toUpper;
+    font-size: $font-size-h2;
+  }
+
+  &_phone-card {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: fit-content;
+
+    &_image {
+      width: 245px;
+      height: 245px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &_wrapper {
+      height: 100%;
+      padding-top: 6.25rem;
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &_wrapper {
+        text-transform: $toUpper;
+      }
+
+      .name {
+        margin-top: 0;
+      }
+
+      .delete_button {
+        color: red;
+        margin: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 3.5rem;
+    text-transform: $toUpper;
+
+    &_payment {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &_price {
+        font-size: $font-size-info;
+        padding-right: 5rem;
+        text-wrap: nowrap;
+        font-weight: $font-weight-regular;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .cart {
+    &_footer {
+      padding-bottom: 2rem;
+
+      &_payment {
+        &_price {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .cart {
+    &_footer {
+      padding-bottom: 2rem;
+      position: relative;
+
+      &_payment {
+        flex-direction: column;
+
+        &_price {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          text-transform: uppercase;
+          padding-right: 2rem;
+          position: absolute;
+          top: -2rem;
+          left: 0;
+          gap: 0;
+        }
+      }
+    }
+  }
+}

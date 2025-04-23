@@ -1,0 +1,21 @@
+@use 'index.scss' as *;
+
+#root {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app_container {
+  width: 91%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .app_container {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+}

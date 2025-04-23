@@ -1,0 +1,19 @@
+@use '../../index.scss' as *;
+
+.button_back-to-grid {
+  background-color: transparent;
+  border: 0;
+  text-transform: uppercase;
+  color: $black;
+  display: flex;
+  font-size: $font-size-big;
+  align-items: center;
+  height: 20px;
+  width: 56px;
+  align-items: center;
+  justify-content: space-between;
+
+  &_text {
+    text-decoration: none;
+  }
+}

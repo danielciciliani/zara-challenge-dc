@@ -1,0 +1,43 @@
+@use '../../index.scss' as *;
+
+.topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+
+  .topbar_wrapper {
+    height: 80px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $black;
+    z-index: 10;
+
+    &_logo {
+    }
+
+    &_bag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &_image {
+        height: 18px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      &_number {
+        padding-left: 8px;
+        font-size: $font-size-topbar;
+        color: $black;
+      }
+    }
+  }
+}
