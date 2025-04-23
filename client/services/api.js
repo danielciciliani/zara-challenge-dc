@@ -4,16 +4,26 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 const placeholderImage = '../../public/placeholder_MBST_4.png';
 
 export async function fetchProducts(limit, searchTerm = '') {
-  let response = await fetch(`${API_URL}?limit=${limit}&search=${searchTerm}`, {
-    method: 'GET',
-    headers: {
-      'x-api-key': API_KEY,
-    },
-  });
+  
+  try {
+    let response = await fetch(`${API_URL}?limit=${limit}&search=${searchTerm}`, {
+      method: 'GET',
+      headers: {
+        'x-api-key': API_KEY,
+      },
+    });
 
-  let data = await response.json();
-  data = filterUniqueProducts(data);
-  return data;
+    if (!response.ok) {
+      throw new Error (`Error http: ${response.status}`);
+    }
+
+    let data = await response.json();
+    data = filterUniqueProducts(data);
+    return data;
+  }  catch (error) {
+    console.error('Error getting products', error);
+    return [];
+  }
 }
 
 export async function fetchProductById(id) {
