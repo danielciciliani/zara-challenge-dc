@@ -9,17 +9,20 @@ import PhoneDetail from './components/PhoneDetail/PhoneDetail'
 import './index.css'
 import './components/PhoneGrid/PhoneGrid.scss'
 import Cart from './components/Cart/Cart'
+import { CartProvider } from './context/CartContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <PhoneProvider>
-      <BrowserRouter>
-          <Routes>
-            <Route path='/' element = {<App />} />  
-            <Route path='/phones/:id' element = {<PhoneDetail />} />
-            <Route path='/cart' element = {<Cart />} />
-          </Routes>
+      <CartProvider>
+        <BrowserRouter>
+            <Routes>
+              <Route path='/' element = {<App />} />  
+              <Route path='/phones/:id' element = {<PhoneDetail />} />
+              <Route path='/cart' element = {<Cart />} />
+            </Routes>
       </BrowserRouter>
+      </CartProvider>
     </PhoneProvider>
   </StrictMode>,
 )

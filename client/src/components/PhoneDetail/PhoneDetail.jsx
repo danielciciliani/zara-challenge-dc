@@ -14,19 +14,19 @@ import TopBar from "../TopBar/TopBar";
 
 import "./../BackToGrid/BackToGrid.scss";
 import "./PhoneDetail.scss"
+import { useCartContext } from "../../context/CartContext";
 
 function PhoneDetail() {
     const { id } = useParams();
     const [productDetail, setProductDetail] = useState(null);
     const [selectedStorage, setSelectedStorage] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
-    const [addedProducts, setAddedProducts] = useState(0);
+    const {addedProducts, setAddedProducts} = useCartContext();
     const isOkToAdd = selectedColor && selectedStorage;
     const { phones, loadPhones} = usePhoneContext();
     const [isPhonesLoaded, setIsPhonesLoaded] = useState(false);
     const current = 'EUR';
     const placeholderImage = getPlaceholder();
-
     
     useEffect(() => {
         const loadPhonesData = async() => {
@@ -71,6 +71,7 @@ function PhoneDetail() {
 
     function addToCart(){
         setAddedProducts(addedProducts + 1);
+        // setQty(addedProducts);
     }
 
     return (
@@ -121,7 +122,12 @@ function PhoneDetail() {
                                 />
                             </div>
                             <div>
-                                <AddToCart isActive={isOkToAdd} addToCart={addToCart} addedProducts={addedProducts}/>
+                                <AddToCart 
+                                    isActive={isOkToAdd} 
+                                    addToCart={addToCart} 
+                                    addedProducts={addedProducts}
+                                    // number={qty}
+                                />
                             </div>
                         </div>
                     </div>

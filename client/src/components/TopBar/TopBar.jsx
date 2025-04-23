@@ -1,13 +1,14 @@
 import {Link} from "react-router";
 import "./TopBar.scss";
 import "./../PhoneDetail/PhoneDetail"
+import { useCartContext } from "../../context/CartContext";
 
+const logo = "./../public/logo_MBST.svg";
+const bagIcon = "./../public/bag_icon.svg";
 
-function TopBar({addedProducts}){
-    const logo = "./../public/logo_MBST.svg";
-    const bagIcon = "./../public/bag_icon.svg";
-    
-
+function TopBar(){
+    const {addedProducts} = useCartContext();
+        
     return (
         <>
             <div className="topbar">
