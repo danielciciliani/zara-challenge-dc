@@ -21,11 +21,12 @@ function PhoneDetail() {
     const [productDetail, setProductDetail] = useState(null);
     const [selectedStorage, setSelectedStorage] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
+    const [imageByColor, setImageByColor] = useState(null);
     const {addedProducts, setAddedProducts} = useCartContext();
     const isOkToAdd = selectedColor && selectedStorage;
     const { phones, loadPhones} = usePhoneContext();
     const [isPhonesLoaded, setIsPhonesLoaded] = useState(false);
-    const current = 'EUR';
+    const currency = 'EUR';
     const placeholderImage = getPlaceholder();
     
     useEffect(() => {
@@ -51,6 +52,14 @@ function PhoneDetail() {
         }
     }, [productDetail]);
 
+    useEffect(() => {
+        if (selectedColor && productDetail?.colorOptions) {
+            const selected = productDetail.colorOptions.find(c => c.hexCode === selectedColor);
+            setImageByColor(selected?.imageUrl || productBasicData?.imageUrl);
+        }
+    }, [selectedColor, productDetail]); 
+    
+
     const handleStorageChange = (storage) => {
         setSelectedStorage(storage);
     };
@@ -67,11 +76,11 @@ function PhoneDetail() {
 
     const specs = productDetail?.specs;
 
-    
+    console.log(productBasicData);
+    console.log(productDetail);
 
     function addToCart(){
         setAddedProducts(addedProducts + 1);
-        // setQty(addedProducts);
     }
 
     return (
@@ -88,7 +97,7 @@ function PhoneDetail() {
                     <div className="phoneDetail_wrapper">
                         <div className="phoneDetail_image">
                             <img className='grid_card_image' src={
-                                productBasicData?.imageUrl || placeholderImage
+                                imageByColor || productBasicData?.imageUrl || placeholderImage
                             } alt={productDetail.name} />
                         </div>
                         <div className="phoneDetail_info">
@@ -103,7 +112,7 @@ function PhoneDetail() {
                                         className="animated_price"
                                     >
                                     {calculatePrice(productBasicData?.basePrice || productDetail.price)}
-                                    </span> {current}
+                                    </span> {currency}
 
                                 </p>
                             </div>
@@ -126,7 +135,6 @@ function PhoneDetail() {
                                     isActive={isOkToAdd} 
                                     addToCart={addToCart} 
                                     addedProducts={addedProducts}
-                                    // number={qty}
                                 />
                             </div>
                         </div>
