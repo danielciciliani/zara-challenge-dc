@@ -13,6 +13,44 @@
         font-size: $font-size-h2;
     }
 
+    &_phone-card{
+        display: flex;
+        flex-direction: row;
+        gap: 65px;
+        width: fit-content;
+
+        &_image{
+            width: 245px;
+            height: 245px;
+            border: 0.5px solid;
+        }
+
+        &_wrapper{
+            height: 100%;
+            padding-top: 6.25rem;
+        }
+
+        &_info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &_wrapper{
+                text-transform: $toUpper;
+            }
+
+            .name{
+                margin-top: 0;
+            }
+
+            .delete_button{
+                color: red;
+                margin: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
     &_footer{
         display: flex;
         flex-direction: row;
