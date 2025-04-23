@@ -78,9 +78,6 @@ function PhoneDetail() {
 
   const specs = productDetail?.specs;
 
-  console.log(productBasicData);
-  console.log(productDetail);
-
   function addToCart() {
     setAddedProducts(addedProducts + 1);
   }

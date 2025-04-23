@@ -1,7 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-const placeholderImage = '/public/placeholder_MBST_4.png';
+const placeholderImage = '/placeholder_MBST_4.png';
 
 export async function fetchProducts(limit, searchTerm = '') {
   
