@@ -43,26 +43,3 @@
     }
 }
 
-
-@media (max-width: $breakpoint-tablet) {
-    .topbar_wrapper{
-        background-color: green;
-     }
-}
-
-@media (max-width: $breakpoint-mobile) {
-
-    .topbar_wrapper{
-       background-color: red;
-    }
-}
-
-
-
-// @media (max-width: $breakpoint-tablet) {
-
-// }
-
-// @media (max-width: $breakpoint-mobile) {
-
-// }
