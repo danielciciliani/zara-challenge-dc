@@ -1,5 +1,6 @@
-const API_URL = `https://prueba-tecnica-api-tienda-moviles.onrender.com/products`;
-const API_KEY = '87909682e6cd74208f41a6ef39fe4191';
+const API_URL = import.meta.env.VITE_API_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
+
 const placeholderImage= "../../public/placeholder_MBST_4.png";
 
 export async function fetchProducts(limit, searchTerm='') {
