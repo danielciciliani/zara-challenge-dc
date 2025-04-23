@@ -120,7 +120,14 @@
         box-sizing: content-box;
     }
 
+    @media (max-width: $breakpoint-laptop) {
 
+        &_card{
+            width: 325px;
+            height: 325px;
+            flex: 0 0 auto;
+        }
+    }
 
     @media (max-width: $breakpoint-tablet) {
 
