@@ -4,8 +4,8 @@ import './../PhoneDetail/PhoneDetail';
 import { useCartContext } from '../../context/CartContext';
 import { useEffect, useState } from 'react';
 
-const logo = '/public/logo_MBST.svg';
-const bagIcon = '/public/bag_icon.svg';
+const logo = '/logo_MBST.svg';
+const bagIcon = '/bag_icon.svg';
 const bagIconFilled = '/bag_icon_filled.svg';
 
 function TopBar() {
