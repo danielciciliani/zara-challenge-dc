@@ -1,20 +1,19 @@
-import { useState } from "react";
-
 import ContinueShopping from "../ContinueShopping/ContinueShopping";
 import PayButton from "../PayButton/PayButton";
-import PhoneCard from "../PhoneCard/PhoneCard";
 import TopBar from "../TopBar/TopBar";
-import "./Cart.scss";
 import { getPlaceholder } from "../../../services/api";
+import { useCartContext } from "../../context/CartContext";
+import "./Cart.scss";
+
 
 function Cart() {
-    const [addedProducts] = useState(0);
     const placeholderImage = getPlaceholder();
     const currency = 'EUR';
+    const {addedProducts} = useCartContext();
 
     return (
         <>
-            <TopBar addedProducts={addedProducts}/>
+            <TopBar/>
             <div className="app_container">
                 <div className="cart">
                     <p className="cart_title">Cart ({addedProducts})</p>
