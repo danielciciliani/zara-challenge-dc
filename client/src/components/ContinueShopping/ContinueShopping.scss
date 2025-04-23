@@ -7,3 +7,10 @@
     color: $black;
     width: 260px;
 }
+
+@media (max-width: $breakpoint-mobile) {
+    
+    .continue-shopping_button{
+        width: 170px;
+    }
+}

@@ -16,7 +16,7 @@
     &_phone-card{
         display: flex;
         flex-direction: row;
-        gap: 65px;
+        gap: 40px;
         width: fit-content;
 
         &_image{
@@ -70,6 +70,51 @@
             &_price{
                 padding-right: 5rem;
                 text-wrap: nowrap;
+                font-weight: $font-weight-regular;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .cart{
+
+        &_footer{
+            padding-bottom: 2rem;
+
+            &_payment{
+
+                &_price{
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .cart{
+
+        &_footer{
+            padding-bottom: 2rem;
+            position: relative;
+
+            &_payment{
+                flex-direction: column;
+
+                &_price{
+                    width: 100%;
+                    font-size: $font-size-info;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    text-transform: uppercase;
+                    padding-right: 2rem;
+                    position: absolute;
+                    top: -2rem;
+                    left: 0;
+
+                }
             }
         }
     }

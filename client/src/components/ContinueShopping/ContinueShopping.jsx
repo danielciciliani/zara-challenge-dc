@@ -3,9 +3,6 @@ import { Link} from "react-router";
 
 function ContinueShopping(){
 
-    
-    
-   
     return (
         <Link to={'/'}>
             <div 

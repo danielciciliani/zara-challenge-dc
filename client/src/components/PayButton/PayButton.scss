@@ -3,6 +3,14 @@
 .pay_button{
     @include basic-button;
     background-color: $black;
+    border: 0.5px solid $border-dark;
     color: white;
     width: 260px;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    
+    .pay_button{
+        width: 170px;
+    }
 }

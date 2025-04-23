@@ -10,6 +10,7 @@ import { getPlaceholder } from "../../../services/api";
 function Cart() {
     const [addedProducts] = useState(0);
     const placeholderImage = getPlaceholder();
+    const currency = 'EUR';
 
     return (
         <>
@@ -40,7 +41,8 @@ function Cart() {
                         </div>
                         <div className="cart_footer_payment">
                             <div className="cart_footer_payment_price">
-                                TOTAL 1199 EUR                                
+                                <div>total</div>
+                                <div>1199 {currency}</div>                           
                             </div>
                             <div className="cart_footer_payment_button">
                                 <PayButton />
