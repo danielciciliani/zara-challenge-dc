@@ -61,6 +61,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 3.5rem;
+        text-transform: $toUpper;
 
         &_payment{
             display: flex;
@@ -68,9 +69,13 @@
             align-items: center;
 
             &_price{
+                font-size: $font-size-info;
                 padding-right: 5rem;
                 text-wrap: nowrap;
                 font-weight: $font-weight-regular;
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
             }
         }
     }
@@ -104,16 +109,14 @@
 
                 &_price{
                     width: 100%;
-                    font-size: $font-size-info;
                     display: flex;
-                    flex-direction: row;
                     justify-content: space-between;
                     text-transform: uppercase;
                     padding-right: 2rem;
                     position: absolute;
                     top: -2rem;
                     left: 0;
-
+                    gap: 0;
                 }
             }
         }
