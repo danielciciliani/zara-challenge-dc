@@ -1,5 +1,5 @@
 function BackToGrid() {
-  const backIcon = './../public/back_icon.svg';
+  const backIcon = '/public/back_icon.svg';
 
   return (
     <>
