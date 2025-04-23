@@ -17,7 +17,7 @@ function App() {
         <PhoneGrid />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,40 +1,38 @@
 @use '../../index.scss' as *;
 
-.specs_title{
-    text-transform: $toUpper;
-    font-size: $font-size-h2;
+.specs_title {
+  text-transform: $toUpper;
+  font-size: $font-size-h2;
 }
 
-.specs_table{
-    $font-size-big: 12px;
+.specs_table {
+  $font-size-big: 12px;
 
-    &_table{
-        border-collapse: collapse; 
-        width: 100%;
-        margin-top: 45px;
+  &_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 45px;
+  }
+
+  td {
+    border-top: 0.5px solid $black;
+    padding: 1rem 0;
+
+    &:nth-last-child(-n + 2) {
+      border-bottom: 0.5px solid $black;
     }
+  }
 
-    td{
-        border-top: 0.5px solid $black;
-        padding: 1rem 0;
-
-        &:nth-last-child(-n+2){
-            border-bottom: 0.5px solid $black;
-        }
-    }
-
-    &_key{
-        text-transform: $toUpper;
-        width: 28%;
-    }
+  &_key {
+    text-transform: $toUpper;
+    width: 28%;
+  }
 }
 
 @media (max-width: $breakpoint-tablet) {
-    
-    .specs_table{
-
-        &_key{
-            width: 46%;
-        }
+  .specs_table {
+    &_key {
+      width: 46%;
     }
+  }
 }

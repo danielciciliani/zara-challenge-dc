@@ -1,43 +1,40 @@
 const API_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-const placeholderImage= "../../public/placeholder_MBST_4.png";
+const placeholderImage = '../../public/placeholder_MBST_4.png';
 
-export async function fetchProducts(limit, searchTerm='') {
+export async function fetchProducts(limit, searchTerm = '') {
+  let response = await fetch(`${API_URL}?limit=${limit}&search=${searchTerm}`, {
+    method: 'GET',
+    headers: {
+      'x-api-key': API_KEY,
+    },
+  });
 
-    let response = await fetch(`${API_URL}?limit=${limit}&search=${searchTerm}`, {
-        method: 'GET', 
-        headers: {
-            'x-api-key': API_KEY
-        }
-    });
-
-    let data = await response.json();
-    data = filterUniqueProducts(data);
-    return data;
+  let data = await response.json();
+  data = filterUniqueProducts(data);
+  return data;
 }
 
 export async function fetchProductById(id) {
+  let response = await fetch(`${API_URL}/${id}`, {
+    method: 'GET',
+    headers: {
+      'x-api-key': API_KEY,
+    },
+  });
 
-    let response = await fetch(`${API_URL}/${id}`, {
-        method: 'GET', 
-        headers: {
-            'x-api-key': API_KEY
-        }
-    });
-    
-    const data =  await response.json();
-    return data;
+  const data = await response.json();
+  return data;
 }
 
-export function filterUniqueProducts(data){
-    
-    const uniqueProducts = Array.from(
-        new Map(data.map(product => [product.id, product])).values()
-    );
-    return uniqueProducts;
-};
+export function filterUniqueProducts(data) {
+  const uniqueProducts = Array.from(
+    new Map(data.map(product => [product.id, product])).values(),
+  );
+  return uniqueProducts;
+}
 
-export function getPlaceholder(){
-    return placeholderImage;
+export function getPlaceholder() {
+  return placeholderImage;
 }

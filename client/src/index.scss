@@ -1,18 +1,19 @@
 $dark-white: #fafafa;
 $white: #ffffff;
 $black: #000000;
-$dark-gray: #79736D;
-$light-gray: #AAAAAA;
-$border-light: #CCCCCC;
-$border-dark: #1B1A18;
-$button-bg-inactive: #F3F2F2;
-$button-inactive: #C2BFBC;
-$button-bg-active: #1B1A18;
+$dark-gray: #79736d;
+$light-gray: #aaaaaa;
+$border-light: #cccccc;
+$border-dark: #1b1a18;
+$button-bg-inactive: #f3f2f2;
+$button-inactive: #c2bfbc;
+$button-bg-active: #1b1a18;
 $button-active: white;
 
-
-
-$font-family: Helvetica Neue, Arial, sans-serif;
+$font-family:
+  Helvetica Neue,
+  Arial,
+  sans-serif;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $line-height-base: 1;
@@ -22,7 +23,6 @@ $font-size-topbar: 16px;
 $font-size-huge: 14px;
 $font-size-big: 12px;
 $font-size-mid: 10px;
-
 
 $color-primary: $black;
 $color-secondary: $dark-gray;
@@ -50,15 +50,15 @@ $breakpoint-mobile: 428px;
   text-decoration: none;
   text-transform: $toUpper;
   text-decoration-line: none;
-  transition: background-color $longer-transition, color $longer-transition;
+  transition:
+    background-color $longer-transition,
+    color $longer-transition;
   cursor: pointer;
 }
 
-@mixin basic-border{
+@mixin basic-border {
   border: 0.5px solid black;
 }
-
-
 
 :root {
   width: 100%;
@@ -73,7 +73,6 @@ $breakpoint-mobile: 428px;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   margin: 0;
   min-width: 320px;
@@ -81,31 +80,29 @@ body {
   font-size: $font-size-big;
   scroll-behavior: smooth;
 
-  h1{
+  h1 {
     font-size: $font-size-h1;
     font-weight: $font-weight-light;
   }
 
-
-  h2{
+  h2 {
     font-size: $font-size-big;
     font-weight: $font-weight-light;
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 
-  li{
+  li {
     list-style-type: none;
   }
 
-  button{
+  button {
     cursor: pointer;
   }
 }
 
-
-.to_upper{
+.to_upper {
   text-transform: $toUpper;
 }

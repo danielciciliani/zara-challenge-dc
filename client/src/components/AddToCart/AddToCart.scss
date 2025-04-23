@@ -1,33 +1,29 @@
-@use "../../index.scss" as *;
+@use '../../index.scss' as *;
 
 .addToCard_button {
-    @include basic-button;
-    width: 100%;
+  @include basic-button;
+  width: 100%;
 
-    &.inactive{
-        background-color: $button-bg-inactive;
-        color: $button-inactive;
-        cursor: not-allowed;
-    }
+  &.inactive {
+    background-color: $button-bg-inactive;
+    color: $button-inactive;
+    cursor: not-allowed;
+  }
 
-    &.active{
-        background-color: $button-bg-active;
-        color: $button-active;
-    }
-
+  &.active {
+    background-color: $button-bg-active;
+    color: $button-active;
+  }
 }
 
-
 @media (max-width: $breakpoint-tablet) {
-    .addToCard_button {
-        width: 260px;
-    }
-
+  .addToCard_button {
+    width: 260px;
+  }
 }
 
 @media (max-width: $breakpoint-mobile) {
-    .addToCard_button {
-        width: 100%;
-    }
+  .addToCard_button {
+    width: 100%;
+  }
 }
-

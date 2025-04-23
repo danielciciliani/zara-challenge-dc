@@ -1,35 +1,30 @@
 @use '../../index.scss' as *;
 
-.similar_products{
+.similar_products {
+  &_title {
+    text-transform: $toUpper;
+    font-size: $font-size-h2;
+  }
 
-    &_title{
-        text-transform: $toUpper;
-        font-size: $font-size-h2;
-    }
+  &_wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
 
-    &_wrapper {
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        width: 100%;
-        scroll-behavior: smooth;
-    }   
-
-    &_grid{
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-    }
+  &_grid {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
 }
 
 @media (max-width: $breakpoint-mobile) {
-
-    .similar_products{
-
-        &_grid{
-            padding-left: 1px;
-        }
+  .similar_products {
+    &_grid {
+      padding-left: 1px;
     }
+  }
 }
-
-
