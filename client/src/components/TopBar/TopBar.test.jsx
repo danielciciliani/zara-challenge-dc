@@ -6,7 +6,7 @@ import { useCartContext } from '../../context/CartContext';
 
 vi.mock('../../context/CartContext', () => ({
   useCartContext: () => ({
-    addedProducts: 2,
+    addedProducts: [{ id: '1' }],
   }),
 }));
 
