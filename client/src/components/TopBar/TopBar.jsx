@@ -17,7 +17,7 @@ function TopBar() {
         <div className="topbar_wrapper">
           <Link to={'/'}>
             <div className="topbar_wrapper_logo">
-              <img src={logo} alt="logo MTSB" />
+              <img src={logo} alt="logo MBST" />
             </div>
           </Link>
           <Link to={'/cart'}>
