@@ -52,7 +52,7 @@ Opcionalmente, se puede optar por iniciar el frontend en modo **production**
 
 ```bash
 cd ../client/
-npm run biuld
+npm run build
 ```
 
 La aplicacion estará disponible en [http://localhost:5173/](http://localhost:5173/)
