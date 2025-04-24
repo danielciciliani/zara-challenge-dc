@@ -7,6 +7,8 @@
   overflow-x: hidden;
 
   &_input {
+    all: unset;
+    border-radius: none;
     border: none;
     border-bottom: 0.5px solid $black;
     width: 100%;
