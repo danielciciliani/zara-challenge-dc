@@ -9,13 +9,7 @@
     align-content: center;
     justify-content: center;
     border-collapse: collapse;
-    border: 0.5px solid;
-    margin-top: -0.5px;
-    margin-bottom: -0.5px;
-    margin-right: -0.5px;
-    margin-left: -0.5px;
-    border-right: 0.5px solid;
-    border-bottom: 0.5px solid;
+    border: 0.5px solid $border-light;
     position: relative;
     overflow: hidden;
     flex: 0 0 auto;
