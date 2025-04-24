@@ -22,6 +22,7 @@ function PhoneDetail() {
   const [selectedStorage, setSelectedStorage] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [imageByColor, setImageByColor] = useState(null);
+  const [displayedColorName, setDisplayedColorName] = useState(null); 
   const { addedProducts, setAddedProducts } = useCartContext();
   const isOkToAdd = selectedColor && selectedStorage;
   const { phones, loadPhones } = usePhoneContext();
@@ -59,6 +60,7 @@ function PhoneDetail() {
         c => c.hexCode === selectedColor,
       );
       setImageByColor(selected?.imageUrl || productBasicData?.imageUrl);
+      setDisplayedColorName(selected?.name);
     }
   }, [selectedColor, productDetail]);
 
@@ -83,7 +85,7 @@ function PhoneDetail() {
       id: productDetail.id,
       name: productDetail.name,
       storage: selectedStorage.capacity,
-      color: selectedColor,
+      color: displayedColorName,
       price: calculatePrice(),
       imageUrl: imageByColor || productDetail.imageUrl || placeholderImage,
     };

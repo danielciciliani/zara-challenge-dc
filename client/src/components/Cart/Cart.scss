@@ -1,7 +1,8 @@
 @use '../../index.scss' as *;
 
 .cart {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  height: 100%;
   margin-top: 80px;
   display: flex;
   flex-direction: column;
@@ -34,6 +35,9 @@
       height: 100%;
       padding-top: 6.25rem;
       padding-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     &_info {
@@ -99,6 +103,23 @@
 
 @media (max-width: $breakpoint-mobile) {
   .cart {
+ 
+    &_phone-card {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      width: fit-content;
+  
+      &_image {
+        width: 160px;
+        height: 197px;
+      }
+
+      &_wrapper {
+        padding-bottom: 5rem;
+      }
+    }
+
     &_footer {
       padding-bottom: 2rem;
       position: relative;
