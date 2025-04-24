@@ -79,7 +79,16 @@ function PhoneDetail() {
   const specs = productDetail?.specs;
 
   function addToCart() {
-    setAddedProducts(addedProducts + 1);
+    const productToAdd = {
+      id: productDetail.id,
+      name: productDetail.name,
+      storage: selectedStorage.capacity,
+      color: selectedColor,
+      price: calculatePrice(),
+      imageUrl: imageByColor || productDetail.imageUrl || placeholderImage,
+    };
+
+    setAddedProducts(prev => [...prev, productToAdd]);
   }
 
   return (
