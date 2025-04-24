@@ -5,10 +5,10 @@
   height: 126px;
   width: 100%;
   overflow-x: hidden;
+  box-sizing: border-box;
 
   &_input {
-    all: unset;
-    border-radius: none;
+    border-radius: unset !important;
     border: none;
     border-bottom: 0.5px solid $black;
     width: 100%;
@@ -16,6 +16,7 @@
     color: $light-gray;
     padding-bottom: 10px;
     background-color: transparent;
+    box-sizing: border-box;
 
     &:focus {
       outline: none;

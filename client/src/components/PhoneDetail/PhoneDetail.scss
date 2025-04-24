@@ -106,13 +106,17 @@
 
 @media (max-width: $breakpoint-mobile) {
   .phoneDetail {
-    margin-top: 7rem;
+    margin-top: 10rem;
 
     &_wrapper {
       flex-direction: column;
     }
 
     &_image {
+      min-height: 260px;
+      height: 260px;
+      width: auto;
+
       img {
         margin-top: 0;
       }
