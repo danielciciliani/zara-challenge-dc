@@ -24,14 +24,14 @@ function TopBar() {
             <div className="topbar_wrapper_bag">
               <img
                 className="topbar_wrapper_bag_image"
-                src={addedProducts !== 0 ? bagIconFilled : bagIcon}
+                src={addedProducts.length > 0 ? bagIconFilled : bagIcon}
                 alt="bag icon"
               />
               <p
                 key={addedProducts}
                 className="topbar_wrapper_bag_number animated_number"
               >
-                {addedProducts}
+                {addedProducts.length}
               </p>
             </div>
           </Link>
