@@ -18,34 +18,25 @@ Pasos para instalar el proyecto localmente:
 
 ```bash
 git clone https://github.com/danielciciliani/zara-challenge-dc.git
-cd zara-challenge-dc.git
-
 ```
-2. Instalar dependecias de la raiz
+
+2. Instalar dependecias de frontend
 ```bash
+cd zara-challenge-dc/client/
 npm install
-
 ```
+3. Modificar el fichero `.env.example` colocando la VITE_API_KEY real para la conexión a la API, y quitando *".example"* del nombre del fichero.
 
-3. Instalar dependecias de frontend
-```bash
-cd client/
-npm install
-
-```
-4. Modificar el fichero `.env.example` colocando la VITE_API_KEY real para la conexión a la API, y quitando *".example"* del nombre del fichero.
-Key de ejemplo:
+- Key de ejemplo:
 ```bash
 VITE_API_KEY=abcdef12345678910
-
 ```
-Nombre del fichero corregido: `.env`.
+- Nombre del fichero corregido: `.env`.
 
-5. Iniciar el fronted en modo **develop**
+4. Iniciar el fronted en modo **develop**
 ```bash
 cd ../client/
 npm run dev
-
 ```
 
 Opcionalmente, se puede optar por iniciar el frontend en modo **production**
