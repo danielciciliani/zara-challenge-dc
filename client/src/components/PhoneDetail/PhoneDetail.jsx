@@ -75,7 +75,7 @@ function PhoneDetail() {
   };
 
   if (!productDetail) {
-    return <p>Loading product detail...</p>;
+    return 0;
   }
 
   const specs = productDetail?.specs;
