@@ -33,13 +33,13 @@ cd client/
 npm install
 
 ```
-
-4. Instalar dependecias de backend
+4. Modificar el fichero `.env.example` colocando la VITE_API_KEY real para la conexión a la API, y quitando *".example"* del nombre del fichero.
+Key de ejemplo:
 ```bash
-cd ../server/
-npm install
+VITE_API_KEY=abcdef12345678910
 
 ```
+Nombre del fichero corregido: `.env`.
 
 5. Iniciar el fronted en modo **develop**
 ```bash
